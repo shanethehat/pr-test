@@ -1,0 +1,37 @@
+{
+  "name": "development",
+  "description": "",
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+
+  "default_attributes": {
+    "nginx": {
+      "sites": {
+        "pr-test.dev": {
+          "server_name": "pr-test.dev",
+          "docroot": "/vagrant/public",
+          "protocols": ["http", "https"]
+        }
+      }
+    },
+
+    "mysql": {
+      "users": {
+        "pr-test": {
+          "password": "pr-test",
+          "database_name": "pr-test"
+        }
+      }
+    },
+
+    "packages": [ "git" ]
+  },
+
+  "override_attributes": {
+    "data-bag-merge": {
+      "environments": {
+        "encrypted": false
+      }
+    }
+  }
+}

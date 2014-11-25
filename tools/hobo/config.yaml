@@ -1,0 +1,12 @@
+---
+:name: pr-test
+:git_url: git@github.com/shanethehat/pr-test
+:seed:
+  :name: default
+  :url: git@github.com:inviqa/hobo-seed-default
+  :version: cc88b07
+:vm_ip: 10.206.50.182
+:hostname: pr-test.dev
+:asset_bucket: inviqa-assets-pr-test
+:vm:
+  :project_mount_path: /vagrant
